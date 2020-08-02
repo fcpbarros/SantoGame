@@ -1,0 +1,2 @@
+rootProject.name='SantoGame'
+include ':app'

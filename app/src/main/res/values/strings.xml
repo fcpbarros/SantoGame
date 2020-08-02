@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DIVINA AÇÃO</string>
+    <string name="santo">SANTO</string>
+    <string name="gerador">GERADOR</string>
+    <string name="jogo">IMAGEM \&amp; AÇÃO</string>
+    <string name="textStyle">
+      <![CDATA[
+         Multiple style inside android textView: bold text: <b>bold
+         text</b>, italicText text: <i>italic text</i>, small font:
+         <small>small text</small>,
+         font color: <font color="blue"<Text Color</font<, font
+         color with bold text: <font color="green"><b>Bold with font
+         color</b></font>
+      ]]>
+   </string>
+
+</resources>

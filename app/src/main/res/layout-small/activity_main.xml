@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teladeFundo"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/mplusroundednegrito"
+                android:text="DIVINA"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mplusrounded1cnormal"
+                android:text="AÇÃO"
+                android:textColor="@color/divider" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TableLayout
+            android:id="@+id/carta1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/radius"
+            android:divider="@drawable/table_divider"
+            android:padding="4dp"
+            android:showDividers="middle"
+            android:shrinkColumns="*"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_weight="0">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/catGente"
+                    style="@style/categorias"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="Gente" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_pessoa"
+                    style="@style/valor"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusroundednegrito"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_pessoaPont"
+                    style="@style/pontuação"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="" />
+
+
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/catObjeto"
+                    style="@style/categorias"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="Coisa" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_objeto"
+                    style="@style/valor"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusroundednegrito"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_objetoPont"
+                    style="@style/pontuação"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/catAção"
+                    style="@style/categorias"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="Ação" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_acao"
+                    style="@style/valor"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusroundednegrito"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_acaoPont"
+                    style="@style/pontuação"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/catDificil"
+                    style="@style/categorias"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="Difícil" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_dificil"
+                    style="@style/valor"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusroundednegrito"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_dificilPont"
+                    style="@style/pontuação"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/catPernambuco"
+                    style="@style/categorias"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="PE" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_pernambuco"
+                    style="@style/valor"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusroundednegrito"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_pernambucoPont"
+                    style="@style/pontuação"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TableLayout
+            android:id="@+id/carta2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/radius2"
+            android:divider="@drawable/table_divider"
+            android:padding="4dp"
+            android:showDividers="middle"
+            android:shrinkColumns="*"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_weight="0">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/catGente2"
+                    style="@style/categorias"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="Gente" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_pessoa2"
+                    style="@style/valor"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusroundednegrito"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_pessoa2Pont"
+                    style="@style/pontuação"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/catObjeto2"
+                    style="@style/categorias"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="Coisa" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_objeto2"
+                    style="@style/valor"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusroundednegrito"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_objeto2Pont"
+                    style="@style/pontuação"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/catAção2"
+                    style="@style/categorias"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="Ação" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_acao2"
+                    style="@style/valor"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusroundednegrito"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_acao2Pont"
+                    style="@style/pontuação"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/catDificil2"
+                    style="@style/categorias"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="Difícil" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_dificil2"
+                    style="@style/valor"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusroundednegrito"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_dificil2Pont"
+                    style="@style/pontuação"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/catPernambuco2"
+                    style="@style/categorias"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="PE" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_pernambuco2"
+                    style="@style/valor"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusroundednegrito"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/vDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cat_pernambuco2Pont"
+                    style="@style/pontuação"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:fontFamily="@font/mplusrounded1cnormal"
+                    android:text="" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/radius_iniciar_reset"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/botaoInicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/cronometro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/opulentbrushalt"
+            android:text="Cronômetro"
+            android:textColor="@color/divider"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/botaoResetar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/timerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="22dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/mplusroundednegrito"
+            android:text="00:00"
+            android:textColor="@color/divider"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/botaoResetar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botaoInicio"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="137dp"
+        android:background="@drawable/radius_iniciar_reset"
+        android:fontFamily="@font/mplusroundednegrito"
+        android:text="iniciar"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botaoResetar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/botaoResetar"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/radius_iniciar_reset"
+        android:fontFamily="@font/mplusrounded1cnormal"
+        android:text="resetar"
+        android:textColor="@color/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botaoInicio"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:id="@+id/botaoGerador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/radius_gerador"
+        android:clickable="true"
+        android:fontFamily="@font/mplusrounded1clight"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoInicio">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="SANTO   "
+            android:textColor="@color/divider"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/SantoGerador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/mplusrounded1cnormal"
+            android:text="@string/gerador"
+            android:textColor="@color/divider"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
