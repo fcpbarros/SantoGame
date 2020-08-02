@@ -1,20 +1,21 @@
 package com.santodia.divinaacao;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.text.Html;
-import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
 
+/**
+ * Testing first commit
+ */
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,37 +47,37 @@ public class MainActivity extends AppCompatActivity {
 
         carregarCategorias();
 
-        botaoGerador = (LinearLayout) findViewById(R.id.botaoGerador);
-        timer = (TextView) findViewById(R.id.timerView);
-        botaoIniciar = (Button) findViewById(R.id.botaoInicio);
-        botaoReset = (Button) findViewById(R.id.botaoResetar);
-        catPernambuco = (TextView) findViewById(R.id.cat_pernambuco);
-        cat_pernambucoPont = (TextView) findViewById(R.id.cat_pernambucoPont);
-        catPernambuco2 = (TextView) findViewById(R.id.cat_pernambuco2);
-        cat_pernambuco2Pont = (TextView) findViewById(R.id.cat_pernambuco2Pont);
-        catAcao = (TextView) findViewById(R.id.cat_acao);
-        cat_acaoPont = (TextView) findViewById(R.id.cat_acaoPont);
-        catAcao2 = (TextView) findViewById(R.id.cat_acao2);
-        cat_acao2Pont = (TextView) findViewById(R.id.cat_acao2Pont);
-        catPessoa = (TextView) findViewById(R.id.cat_pessoa);
-        cat_pessoaPont = (TextView) findViewById(R.id.cat_pessoaPont);
-        catPessoa2 = (TextView) findViewById(R.id.cat_pessoa2);
-        cat_pessoa2Pont = (TextView) findViewById(R.id.cat_pessoa2Pont);
-        catDificil = (TextView) findViewById(R.id.cat_dificil);
-        cat_dificilPont = (TextView) findViewById(R.id.cat_dificilPont);
-        catDificil2 = (TextView) findViewById(R.id.cat_dificil2);
-        cat_dificil2Pont = (TextView) findViewById(R.id.cat_dificil2Pont);
-        catObjeto = (TextView) findViewById(R.id.cat_objeto);
-        cat_objetoPont = (TextView) findViewById(R.id.cat_objetoPont);
-        catObjeto2 = (TextView) findViewById(R.id.cat_objeto2);
-        cat_objeto2Pont = (TextView) findViewById(R.id.cat_objeto2Pont);
+        botaoGerador = findViewById(R.id.botaoGerador);
+        timer = findViewById(R.id.timerView);
+        botaoIniciar = findViewById(R.id.botaoInicio);
+        botaoReset = findViewById(R.id.botaoResetar);
+        catPernambuco = findViewById(R.id.cat_pernambuco);
+        cat_pernambucoPont = findViewById(R.id.cat_pernambucoPont);
+        catPernambuco2 = findViewById(R.id.cat_pernambuco2);
+        cat_pernambuco2Pont = findViewById(R.id.cat_pernambuco2Pont);
+        catAcao = findViewById(R.id.cat_acao);
+        cat_acaoPont = findViewById(R.id.cat_acaoPont);
+        catAcao2 = findViewById(R.id.cat_acao2);
+        cat_acao2Pont = findViewById(R.id.cat_acao2Pont);
+        catPessoa = findViewById(R.id.cat_pessoa);
+        cat_pessoaPont = findViewById(R.id.cat_pessoaPont);
+        catPessoa2 = findViewById(R.id.cat_pessoa2);
+        cat_pessoa2Pont = findViewById(R.id.cat_pessoa2Pont);
+        catDificil = findViewById(R.id.cat_dificil);
+        cat_dificilPont = findViewById(R.id.cat_dificilPont);
+        catDificil2 = findViewById(R.id.cat_dificil2);
+        cat_dificil2Pont = findViewById(R.id.cat_dificil2Pont);
+        catObjeto = findViewById(R.id.cat_objeto);
+        cat_objetoPont = findViewById(R.id.cat_objetoPont);
+        catObjeto2 = findViewById(R.id.cat_objeto2);
+        cat_objeto2Pont = findViewById(R.id.cat_objeto2Pont);
 
         botaoGerador.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 p1 = new Random().nextInt(TAMANHO_DAS_CATEGORIAS);
                 p2 = new Random().nextInt(TAMANHO_DAS_CATEGORIAS);
-                while(p1 == p2){
+                while (p1 == p2) {
                     p2 = new Random().nextInt(TAMANHO_DAS_CATEGORIAS);
                 }
                 p3 = new Random().nextInt(TAMANHO_DAS_CATEGORIAS);
